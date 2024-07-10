@@ -22,6 +22,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			postSingUp: async (name, email, password) => {
+				console.log(name,email,password)
 				try{
 					// fetching data from the backend
 					const resp = await fetch(process.env.BACKEND_URL + "api/singup", {
@@ -30,7 +31,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						body: JSON.stringify({
 							name: name,
 							email: email,
-							password: password,
+							password: password
 						})
 					})
 					const data = await resp.json()
@@ -38,10 +39,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log(data)
 
 					return data;
+
 				}catch(error){
 					console.log("Error create user", error)
 				}
 			},
+
+
+
+
+			
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
