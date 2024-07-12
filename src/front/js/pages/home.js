@@ -29,10 +29,11 @@ export const Home = () => {
 
 	return (
 		<div className="text-center mt-5">
-			<h1>Create User</h1>
-			<div className="container">
+
+			<div className="container p-3 border border-black rounded-3 ">
+				<h1>Create User</h1>
 				<form className="row g-3" onSubmit={handleClick}>
-					<div className="col-12">
+					<div className="col-6">
 						<label htmlFor="inputAddress" className="form-label">Name</label>
 						<input type="text" className="form-control" id="inputAddress" name="name" value={data.name} onChange={handleChange} />
 					</div>
@@ -40,12 +41,12 @@ export const Home = () => {
 						<label htmlFor="inputEmail4" className="form-label">Email</label>
 						<input type="email" className="form-control" id="inputEmail4" name="email" value={data.email} onChange={handleChange} />
 					</div>
-					<div className="col-md-6">
+					<div className="col-md-12">
 						<label htmlFor="inputPassword4" className="form-label">Password</label>
 						<input type="password" className="form-control" id="inputPassword4" name="password" value={data.password} onChange={handleChange} />
 					</div>
 					<div className="col-12">
-						<button type="submit" className="btn btn-primary">Sign in</button>
+						<button type="submit" className="btn btn-primary w-100 my-5">Sign in</button>
 					</div>
 				</form>
 			</div>
